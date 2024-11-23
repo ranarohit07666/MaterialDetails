@@ -54,7 +54,7 @@ namespace MaterialDetails.Controllers
                     return BadRequest(ModelState);
                 }
                 await _materialService.CreateMaterial(viewmodel);
-                return StatusCode(StatusCodes.Status500InternalServerError, "Material created successfully.");
+                return StatusCode(StatusCodes.Status201Created, "Material created successfully.");
             }
             catch (Exception ex)
             {
